@@ -1,0 +1,65 @@
+package com.app.controller.bean
+
+data class StatUserSummaryBean(
+        val userId:Int,
+        val schoolId:Int,
+        val gradeType:Int,
+        val grade:Int,
+        val classNum:Int,
+        val attendDays:Int,
+        val unClockedDays:Int,
+        val restDays:Int,
+        val leaveDays:Int,
+        val leaveMinutes:Int,
+        val tranferLeaveMinutes:Int,
+        val normalLeaveDays:Int,
+        val tranferLeaveDays:Int,
+        val normalLeaveMinutes:Int,
+        val bizTripMinutes:Int,
+        val bizTripDays:Int,
+        val lateTimes:Int,
+        val lateMinutes:Int,
+        val earlyTimes:Int,
+        val earlyMinutes:Int,
+        val overtimeDays:Int,
+        val overtimeMinutes:Int,
+        val absenceDays:Int,
+        val absenceMinutes:Int,
+        val userName:String,
+        val sno:String,
+        val schoolName:String,
+        val schoolYear:String,
+        val logo:String,
+        val details:List<StatUserSummaryDetailBean>
+)
+data class StatUserSummaryDetailBean(
+        val id:Int,
+        val userId:Int,
+        val schoolId:Int,
+        val status:Int,
+        val unClocked:Int,
+        val isHoliday:Int,
+        val hasAttended:Int,
+        val tranferLeaveMinutes:Int,
+        val normalLeaveMinutes:Int,
+        val bizTripMinutes:Int,
+        val lateTimes:Int,
+        val lateMinutes:Int,
+        val earlyTimes:Int,
+        val earlyMinutes:Int,
+        val overtimeMinutes:Int,
+        val absenceMinutes:Int,
+        val userName:String,
+        val schoolName:String,
+        val logo:String,
+        val attendanceDate:String,
+        val createTime:String,
+        val updateTime:String
+)
+
+data class UserSummaryBean(
+        val title:String,
+        val type:Int,
+        val day:Int,
+        val details:List<StatUserSummaryDetailBean>
+)
